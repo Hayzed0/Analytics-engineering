@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: dim_zone
+    description: Taxi zone dimension table with location details
+    columns:
+      - name: location_id
+        description: Unique identifier for each taxi zone
+        tests:
+          - unique
+          - not_null
+      - name: borough
+        description: NYC borough name
+      - name: zone
+        description: Specific zone name within the borough
+      - name: service_zone
+        description: Service zone classification
+
+  # - name: dim_vendors
+  #   description: Taxi technology vendor dimension table
+  #   columns:
+  #     - name: vendor_id
+  #       description: Unique vendor identifier
+  #       tests:
+  #         - unique
+  #         - not_null
+  #     - name: vendor_name
+  #       description: Company name of the vendor
+
+  - name: fact_trips
+    description: ""
+    columns:
+      - name: tripid
+        data_type: string
+        description: ""
+
+      - name: vendorid
+        data_type: int64
+        description: ""
+
+      - name: service_type
+        data_type: string
+        description: ""
+
+      - name: ratecodeid
+        data_type: int64
+        description: ""
+
+      - name: pickup_locationid
+        data_type: int64
+        description: ""
+
+      - name: dropoff_locationid
+        data_type: int64
+        description: ""
+
+      - name: pickup_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: dropoff_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: passenger_count
+        data_type: int64
+        description: ""
+
+      - name: trip_distance
+        data_type: numeric
+        description: ""
+
+      - name: fare_amount
+        data_type: numeric
+        description: ""
+
+      - name: total_amount
+        data_type: numeric
+        description: ""
+
+      - name: payment_type_description
+        data_type: string
+        description: ""
+
+      - name: pickup_borough
+        data_type: string
+        description: ""
+
+      - name: pickup_zone_name
+        data_type: string
+        description: ""
+
+      - name: dropoff_borough
+        data_type: string
+        description: ""
+
+      - name: dropoff_zone_name
+        data_type: string
+        description: ""
