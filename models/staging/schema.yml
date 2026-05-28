@@ -34,7 +34,7 @@ models:
         tests:
           - relationships:
               arguments:
-                to: ref('taxi_zone_lookup')
+                to: ref('dim_zone')
                 field: locationid
               config:
                 severity: warn
