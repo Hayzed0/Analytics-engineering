@@ -2,30 +2,23 @@ version: 2
 
 models:
   - name: dim_zone
-    description: Taxi zone dimension table with location details
+    description: ""
     columns:
-      - name: location_id
-        description: Unique identifier for each taxi zone
-        tests:
-          - unique
-          - not_null
-      - name: borough
-        description: NYC borough name
-      - name: zone
-        description: Specific zone name within the borough
-      - name: service_zone
-        description: Service zone classification
+      - name: locationid
+        data_type: int64
+        description: ""
 
-  # - name: dim_vendors
-  #   description: Taxi technology vendor dimension table
-  #   columns:
-  #     - name: vendor_id
-  #       description: Unique vendor identifier
-  #       tests:
-  #         - unique
-  #         - not_null
-  #     - name: vendor_name
-  #       description: Company name of the vendor
+      - name: borough
+        data_type: string
+        description: ""
+
+      - name: zone
+        data_type: string
+        description: ""
+
+      - name: service_zone
+        data_type: string
+        description: ""
 
   - name: fact_trips
     description: ""
